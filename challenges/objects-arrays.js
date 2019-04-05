@@ -8,27 +8,59 @@
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
 
+tyrannosaurus.Name = 'tyrannosaurus';
+tyrannosaurus.Diet = 'carnivorous';
+tyrannosaurus.Weight = '7000kg';
+tyrannosaurus.Length = '12m';
+tyrannosaurus.Period = 'Late Cretaceious';
+tyrannosaurus.Roar = 'RAWERSRARARWERSARARARRRR!'
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 
+stegosaurus.Name = 'stegosaurus';
+stegosaurus.Diet = 'herbivorous';
+stegosaurus.Weight = ' 2000kg';
+stegosaurus.Length = '9m';
+stegosaurus.Period = 'Late Jurassic';
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
 
+velociraptor.Name = 'velociraptor';
+velociraptor.Diet = 'carnivorous';
+velociraptor.Weight = '15kg';
+velociraptor.Length = '1.8m';
+velociraptor.Period = 'Late Cretaceious';
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log();
+const weight = function(tyrannosaurus){
+return tyrannosaurus.Weight;
+}
+console.log(tyrannosaurus.Weight);
 
 // What was the diet of a velociraptor?
-console.log();
+const Diet = function(velociraptor) {
+  return velociraptor.Diet;
+}
+console.log(velociraptor.Diet);
 
 // How long was a stegosaurus?
-console.log();
+const Length = function(stegosaurus) {
+  return stegosaurus.Length;
+}
+console.log(stegosaurus.Length);
 
 // What time period did tyrannosaurus live in?
-console.log();
+const Period = function (tyrannosaurus){
+  return tyrannosaurus.Period;
+}
+console.log(tyrannosaurus.Period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log();
+const Roar = function ()  {
+  return tyrannosaurus.Roar
+}
+
+console.log(tyrannosaurus.Roar);
 
 
 // ==== Arrays ====
@@ -49,21 +81,38 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 /* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.  
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
-const universities = [];
-console.log(universities)
-
+const universities = ['Missouri Southern State College','The School of the Art Institute of Chicago','Marian College',
+'International Medical & Technological University', 'Sultan Salahuddin Abdul Aziz Shah Polytechnic', 'Fachhochschule Rosenheim, Hochschule für Technik und Wirtschaft',
+'Salem University', 'Coastal Carolina University', 'Universidad Católica de Ávila', 'Universitat Rovira I Virgili Tarragona'];
+newFunction();
+console.log(universities);
+function universities(a, b) {
+  a = a.toLowerCase();
+  return a > b ? 1 : b > a ? -1 : 0;
+}
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
 The resulting contact information should have a space between the first name and the email information like this: 
 Name email@example.com
 
 Log the result of your new array. */
-const contactInfo = [];
+const contactInfo = [
+  {"id":1,"first_name":"Cynde", "email":"ctorry0@macromedia.com"},
+  {"id":2,"first_name":"Saundra", "email":"swhal1@state.gov"},
+  {"id":1,"first_name":"Lambert", "email":"lparham2@techcrunch.com"},
+  {"id":1,"first_name":"Modestine", "email":"mdolder3@symantec.com"}, 
+  {"id":1,"first_name":"Chick", "email":"camorts4@google.com.au"},
+  {"id":1,"first_name":"Jako", "email":"jharken5@spiegel.de"}, 
+  {"id":1,"first_name":"Robbi", "email":"rbrister6@redcross.org"}, 
+  {"id":1,"first_name":"Colline", "email":"cbrosh7@alibaba.com"},
+  {"id":1,"first_name":"Michail", "email":"mrome8@shinystat.com"},
+  {"id":1,"first_name":"Hube", "email":"hlethbrig9@foxnews.com"}];
 console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
+sort.uni();
 console.log(uni);
 
 
@@ -117,6 +166,18 @@ const populationTotal = 0;
 console.log(populationTotal);
 
 
+
+function newFunction() {
+  universities.sort();
+}
+
+function newFunction() {
+  return tyrannosaurus.Roar;
+}
+
+function newFunction() {
+  return dinosaur.Name;
+}
 /* 
 
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
